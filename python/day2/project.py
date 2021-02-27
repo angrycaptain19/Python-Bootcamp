@@ -1,0 +1,15 @@
+# If the bill was $150.00, split between 5 people, with 12% tip.
+# Each person should pay (150.00 / 5) * 1.12 = 33.6
+# Format the result to 2 decimal places = 33.60
+# Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
+# HINT 1: https://www.google.com/search?q=how+to+round+number+to+2+decimal+places+python&oq=how+to+round+number+to+2+decimal
+# HINT 2: https://www.kite.com/python/answers/how-to-limit-a-float-to-two-decimal-places-in-python
+
+
+bill = float(input("Enter the Bill Amount: "))
+tax = int(input("How many tax will have to Pay 5%, 10%, 12%? "))
+person = int(input("How many people have to Pay? "))
+
+total_bill = (bill*(tax/100)+bill)/person
+final_bill = round(total_bill, 2)
+print(f"Your Final Bill is {final_bill}")
