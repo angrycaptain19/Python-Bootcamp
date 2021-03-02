@@ -32,15 +32,9 @@ def is_leap(year):
     Check Leap Year
     """
     if year % 4 == 0:
-        if year % 100 == 0:
-            if year % 400 == 0:
-               return True
-            else:
-                return False
-        else:
-          return True
+        return year % 400 == 0 or year % 100 != 0
     else:
-       return False
+        return False
   
 def days_in_month(year,month):
     
